@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="fr"><head><meta charset="utf-8"><title>GoonGoBuy – Commandez en Chine, on s’occupe du reste</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Caveat:wght@600&display=swap" rel="stylesheet">
+<style>
+:root{--o:#F26B00;--o2:#FF9A2E;--soft:#FFF0E0;--ink:#141414;--bg:#FFFBF6;--card:#fff;--mut:#6b6358;--line:#f1e0cb;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);color-scheme:light}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--soft:#2c2013;--ink:#f6efe6;--bg:#16120d;--card:#211a12;--mut:#b9ad9d;--line:#3a2d1e;color-scheme:dark}}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}body{margin:0;font-family:Poppins,system-ui,sans-serif;background:var(--bg);color:var(--ink);line-height:1.55}
+a{color:inherit;text-decoration:none}button,input,select{font:inherit;color:inherit}
+.top{background:var(--o);color:#fff;font-size:13px;font-weight:500;padding:9px 24px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--bg);border-bottom:1px solid var(--line);display:flex;align-items:center;gap:28px;padding:12px 24px}
+.logo{font-weight:800;font-style:italic;font-size:30px;letter-spacing:-1.5px;line-height:1;position:relative;padding-bottom:7px}
+.logo b{color:var(--o)}.logo:after{content:"";position:absolute;left:8%;right:6%;bottom:0;height:5px;border-radius:50%;border-bottom:4px solid var(--o)}
+nav{display:flex;gap:22px;flex:1;flex-wrap:wrap}nav a{font-weight:500;font-size:15px;padding:6px 0;border-bottom:3px solid transparent}nav a.on{color:var(--o);border-color:var(--o)}
+.hr{display:flex;gap:12px;align-items:center}
+.btn{background:var(--o);color:#fff;border:0;border-radius:99px;padding:11px 24px;font-weight:600;cursor:pointer;display:inline-block}
+.btn:hover{background:#d85d00}.btn.ghost{background:none;color:var(--o);border:1.5px solid var(--o)}.btn.sm{padding:7px 16px;font-size:14px}
+.ic{background:none;border:0;cursor:pointer;position:relative;font-size:15px;font-weight:500;padding:6px}
+.badge{position:absolute;top:-4px;right:-6px;background:var(--o);color:#fff;border-radius:99px;font-size:11px;padding:0 6px;min-width:18px;text-align:center}
+:focus-visible{outline:3px solid var(--o2);outline-offset:2px}
+main{max-width:1180px;margin:0 auto;padding:0 24px 60px}
+.hero{display:grid;grid-template-columns:1.1fr 1fr;gap:30px;align-items:center;padding:48px 0 30px}
+.pill{display:inline-block;background:var(--soft);border:1px solid var(--line);color:var(--o);border-radius:99px;padding:6px 18px;font-size:14px;font-weight:500}
+h1{font-size:clamp(36px,5.6vw,64px);line-height:1.04;letter-spacing:-2.5px;margin:18px 0;font-weight:800}
+h1 em{color:var(--o);font-style:italic;text-decoration:underline wavy var(--o2) 3px;text-underline-offset:10px}
+h2{font-size:clamp(26px,3.4vw,38px);letter-spacing:-1px;margin:0 0 8px;line-height:1.15}h3{margin:0 0 4px}
+.lead{color:var(--mut);max-width:520px}
+.perks{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:26px 0}.perk{font-size:12px;color:var(--mut)}.perk b{display:block;color:var(--o);font-size:14px}
+.blob{background:radial-gradient(circle at 70% 30%,#ffb35c,var(--o) 70%);border-radius:58% 42% 50% 50%/45% 55% 45% 55%;padding:14px;position:relative}
+.blob svg{width:100%;height:auto;display:block}.note{font-family:Caveat,cursive;color:var(--o);font-size:26px;line-height:1;position:absolute;right:6px;top:-18px;transform:rotate(-6deg);width:130px;text-align:right}
+.stats{background:var(--soft);border-radius:24px;display:grid;grid-template-columns:repeat(4,1fr);gap:16px;padding:22px 30px;margin:18px 0 50px}
+.stats b{font-size:30px;display:block;line-height:1.1}.stats span{color:var(--mut);font-size:14px}
+.sec{margin:56px 0}.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:20px;margin-top:22px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:20px}
+.card .ico{font-size:28px;display:block;margin-bottom:6px}
+.steps{counter-reset:s;display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:22px}
+.step{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:20px;position:relative}
+.step:before{counter-increment:s;content:counter(s);display:grid;place-items:center;width:34px;height:34px;border-radius:50%;background:var(--o);color:#fff;font-weight:700;margin-bottom:10px}
+.prod{padding:0;overflow:hidden;display:flex;flex-direction:column}.prod svg{width:100%;display:block}.prod .in{padding:14px 16px 16px;display:flex;flex-direction:column;gap:2px;flex:1}
+.cat{font-size:12px;color:var(--mut)}.price{font-weight:700;font-size:20px;color:var(--o)}.prod .row{display:flex;justify-content:space-between;align-items:center;margin-top:auto;padding-top:10px}
+.bar{display:flex;gap:10px;flex-wrap:wrap;margin:18px 0}.bar input{flex:1;min-width:200px}
+input,select{background:var(--card);border:1.5px solid var(--line);border-radius:12px;padding:11px 14px;width:100%}
+.chip{border:1.5px solid var(--line);background:var(--card);border-radius:99px;padding:7px 16px;cursor:pointer;font-size:14px}.chip.on{background:var(--o);border-color:var(--o);color:#fff}
+.est{display:grid;grid-template-columns:1fr 1fr;gap:22px}.fields{display:grid;grid-template-columns:1fr 1fr;gap:12px}.fields label{font-size:13px;color:var(--mut);display:block}.fields .w{grid-column:1/-1}
+.res{background:linear-gradient(145deg,var(--o),var(--o2));color:#fff;border-radius:20px;padding:26px}.res big{font-size:48px;font-weight:800;display:block;line-height:1.1}.res p{margin:6px 0;opacity:.95}
+.tl{list-style:none;padding:0;margin:20px 0}.tl li{padding:0 0 22px 34px;position:relative;border-left:3px solid var(--line);margin-left:10px}.tl li:before{content:"";position:absolute;left:-11px;top:0;width:19px;height:19px;border-radius:50%;background:var(--card);border:3px solid var(--line)}.tl li.d{border-color:var(--o)}.tl li.d:before{background:var(--o);border-color:var(--o)}.tl small{color:var(--mut);display:block}
+details{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px 20px;margin:10px 0}summary{cursor:pointer;font-weight:600}details p{color:var(--mut);margin:10px 0 0}
+.tabs{display:flex;gap:8px;margin-bottom:16px}.auth{max-width:440px;margin:40px auto}.auth .card{display:grid;gap:12px}
+.dash{display:grid;grid-template-columns:260px 1fr;gap:22px;margin-top:24px}.big{font-size:34px;font-weight:800;color:var(--o)}
+table{width:100%;border-collapse:collapse;font-size:14px}td,th{text-align:left;padding:10px 8px;border-bottom:1px solid var(--line)}.sc{overflow-x:auto}
+#dr{position:fixed;top:0;right:0;height:100%;width:min(420px,100%);background:var(--bg);z-index:40;padding:24px;transform:translateX(105%);transition:transform .25s;box-shadow:-10px 0 40px #0004;display:flex;flex-direction:column;padding-top:calc(24px + env(safe-area-inset-top,0px));padding-bottom:calc(24px + env(safe-area-inset-bottom,0px))}
+#dr.o{transform:none}.ci{display:flex;gap:12px;align-items:center;padding:10px 0;border-bottom:1px solid var(--line)}.ci svg{width:64px;border-radius:10px;flex:none}.ci div{flex:1;font-size:14px}
+.q button{width:26px;height:26px;border-radius:50%;border:1px solid var(--line);background:var(--card);cursor:pointer}
+#toast{position:fixed;left:50%;bottom:calc(24px + env(safe-area-inset-bottom,0px));transform:translate(-50%,100px);background:var(--ink);color:var(--bg);padding:12px 22px;border-radius:99px;z-index:50;transition:transform .25s}#toast.s{transform:translate(-50%,0)}
+footer{background:var(--soft);padding:34px 24px;text-align:center;color:var(--mut);font-size:14px}
+@media(max-width:860px){.hero,.est,.dash{grid-template-columns:1fr}.steps,.perks,.stats{grid-template-columns:1fr 1fr}header{flex-wrap:wrap;gap:10px}nav{order:3;flex-basis:100%;overflow-x:auto;flex-wrap:nowrap;gap:16px}.top span:last-child{display:none}}
+@media(prefers-reduced-motion:reduce){*{transition:none!important}}
+</style></head><body>
+<div class="top"><span>🚚 4/5 € le kg &nbsp;•&nbsp; Livraison en 8 jours &nbsp;•&nbsp; -25 % sur votre première commande !</span><span>Expédition depuis la Chine vers le monde entier ✈</span></div>
+<header><a href="#accueil" class="logo" aria-label="GoonGoBuy">Goon<b>Go</b>Buy</a>
+<nav id="nav"></nav>
+<div class="hr"><button class="ic" onclick="cart(1)" aria-label="Panier">🛒<span class="badge" id="cnt">0</span></button><a class="ic" href="#compte" id="acc">👤 Se connecter</a><a class="btn sm" href="#compte" id="reg">S’inscrire</a></div></header>
+<main id="app"></main>
+<footer><div class="logo" style="display:inline-block;margin-bottom:8px">Goon<b>Go</b>Buy</div><br>Votre partenaire logistique en Chine · Site de démonstration, aucun achat réel.<br>© 2026 GoonGoBuy</footer>
+<aside id="dr" aria-label="Panier"></aside><div id="toast" role="status"></div>
+<script>
+const $=s=>document.querySelector(s);
+const P=[
+{id:1,n:"Sneakers Cloud Run",c:"Chaussures",p:38,w:1.2,t:"shoe",k:"#F26B00"},
+{id:2,n:"Sac bandoulière Urban",c:"Sacs",p:24,w:0.7,t:"bag",k:"#222"},
+{id:3,n:"Hoodie oversize Studio",c:"Vêtements",p:29,w:0.9,t:"tee",k:"#ff9a2e"},
+{id:4,n:"Montre Chrono Steel",c:"Accessoires",p:45,w:0.4,t:"watch",k:"#444"},
+{id:5,n:"Casque sans fil Bass+",c:"Électronique",p:32,w:0.5,t:"head",k:"#F26B00"},
+{id:6,n:"Lampe de bureau Aura",c:"Maison",p:19,w:0.8,t:"lamp",k:"#e8b04a"},
+{id:7,n:"Sneakers Retro Low",c:"Chaussures",p:41,w:1.1,t:"shoe",k:"#2a6f97"},
+{id:8,n:"T-shirt Boxy Heavy",c:"Vêtements",p:14,w:0.35,t:"tee",k:"#333"},
+{id:9,n:"Sac à dos Voyage 30L",c:"Sacs",p:36,w:1.0,t:"bag",k:"#c2410c"},
+{id:10,n:"Écouteurs Pods Mini",c:"Électronique",p:18,w:0.15,t:"head",k:"#555"},
+{id:11,n:"Veste Coupe-vent",c:"Vêtements",p:34,w:0.8,t:"tee",k:"#0f766e"},
+{id:12,n:"Lunettes Sun Classic",c:"Accessoires",p:12,w:0.1,t:"watch",k:"#111"}];
+const SH={shoe:'<path d="M30 118V78q34-4 50-28l22 14q22 8 62 20 20 6 20 34z" fill="K"/><path d="M26 126h164v10H26z" fill="#fff"/><path d="M82 66l8 14m10-8l8 14" stroke="#fff" stroke-width="4"/>',
+bag:'<path d="M80 62q0-30 40-30t40 30" fill="none" stroke="K" stroke-width="8"/><rect x="56" y="62" width="128" height="86" rx="16" fill="K"/><rect x="56" y="88" width="128" height="10" fill="#fff" opacity=".5"/><circle cx="120" cy="108" r="8" fill="#fff"/>',
+tee:'<path d="M70 44l30-12q20 14 40 0l30 12 28 34-26 14-8-14v72H76V78l-8 14-26-14z" fill="K"/><circle cx="120" cy="100" r="12" fill="#fff" opacity=".6"/>',
+watch:'<rect x="98" y="20" width="44" height="40" fill="K"/><rect x="98" y="140" width="44" height="40" fill="K"/><circle cx="120" cy="100" r="44" fill="K" stroke="#fff" stroke-width="5"/><circle cx="120" cy="100" r="34" fill="#fff"/><path d="M120 100V78M120 100l16 8" stroke="#222" stroke-width="4" stroke-linecap="round"/>',
+head:'<path d="M66 110V96q0-56 54-56t54 56v14" fill="none" stroke="K" stroke-width="10"/><rect x="54" y="98" width="30" height="52" rx="14" fill="K"/><rect x="156" y="98" width="30" height="52" rx="14" fill="K"/>',
+lamp:'<path d="M84 80l36-48 36 48z" fill="K"/><path d="M120 80v60" stroke="#444" stroke-width="6"/><ellipse cx="120" cy="150" rx="34" ry="8" fill="#444"/><path d="M108 90h24l10 20h-44z" fill="#fff" opacity=".5"/>'};
+const art=(t,k)=>`<svg viewBox="0 0 240 180" role="img" aria-label="${t}"><defs><linearGradient id="g${t}${k.slice(1)}" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FFE9D0"/><stop offset="1" stop-color="#FFC48A"/></linearGradient></defs><rect width="240" height="180" fill="url(#g${t}${k.slice(1)})"/><ellipse cx="120" cy="158" rx="70" ry="9" fill="#0002"/>${SH[t].replaceAll('K',k)}</svg>`;
+const hero=()=>`<svg viewBox="0 0 520 380" role="img" aria-label="Avion et navire cargo GoonGoBuy"><defs><linearGradient id="sk" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFD9A8"/><stop offset="1" stop-color="#FFF4E6"/></linearGradient></defs><rect width="520" height="380" rx="40" fill="url(#sk)"/><circle cx="410" cy="90" r="46" fill="#ffb35c" opacity=".7"/>
+<g transform="rotate(-12 270 120)"><path d="M120 120q10-24 60-24l230 8q40 4 40 16t-40 16l-230 8q-50 0-60-24z" fill="#fff" stroke="#ddd"/><path d="M330 104l60-62 18 6-34 58z" fill="#F26B00"/><path d="M230 128l70 50h30l-30-52z" fill="#eee"/><circle cx="268" cy="152" r="16" fill="#555"/><text x="190" y="124" font-family="Poppins" font-weight="800" font-style="italic" font-size="22" fill="#222">GoonGoBuy</text></g>
+<path d="M30 300h460l-40 50H80z" fill="#1c1c1c"/><path d="M60 320h400l-10 18H80z" fill="#F26B00"/>
+${[0,1,2,3,4,5,6,7].map(i=>`<rect x="${70+i*44}" y="${252+(i%2)*0}" width="40" height="22" fill="${['#F26B00','#2a4b6f','#c2410c','#e8943a'][i%4]}"/><rect x="${70+i*44}" y="${274}" width="40" height="22" fill="${['#2a4b6f','#F26B00','#e8943a','#c2410c'][i%4]}"/>`).join('')}
+<rect x="300" y="225" width="40" height="27" fill="#F26B00"/><rect x="344" y="225" width="40" height="27" fill="#2a4b6f"/><text x="130" y="336" font-family="Poppins" font-weight="800" font-style="italic" font-size="20" fill="#fff">GoonGoBuy</text></svg>`;
+const ST={cart:[],user:null,orders:[],wallet:0};
+try{const s=JSON.parse(localStorage.getItem('ggb')||'null');if(s)Object.assign(ST,s)}catch(e){}
+const save=()=>{try{localStorage.setItem('ggb',JSON.stringify(ST))}catch(e){}};
+const eur=n=>n.toFixed(2).replace('.',',')+' €';
+const toast=m=>{const t=$('#toast');t.textContent=m;t.className='s';clearTimeout(toast.h);toast.h=setTimeout(()=>t.className='',2200)};
+const NAV=[['accueil','Accueil'],['boutique','Boutique'],['services','Services'],['estimateur','Estimateur'],['suivi','Suivi de colis'],['apropos','À propos'],['faq','FAQ']];
+function pc(p){return `<div class="card prod">${art(p.t,p.k)}<div class="in"><span class="cat">${p.c} · ${p.w} kg</span><b>${p.n}</b><div class="row"><span class="price">${eur(p.p)}</span><button class="btn sm" onclick="add(${p.id})">Ajouter</button></div></div></div>`}
+function estimator(){return `<div class="est"><div class="card"><h3>Estimateur de prix</h3><p class="cat">Calculez vos frais de livraison avant de commander.</p><div class="fields">
+<div><label for="ew">Poids (kg)</label><input id="ew" type="number" min="0.1" step="0.1" value="1.5" oninput="calc()"></div>
+<div><label for="ec">Pays</label><select id="ec" onchange="calc()"><option value="1">France</option><option value="1">Belgique</option><option value="1.1">Suisse</option><option value="1.3">Canada</option><option value="1.35">États-Unis</option><option value="1">Allemagne</option><option value="1.15">Espagne</option></select></div>
+<div class="w"><label for="el">Ligne d’expédition</label><select id="el" onchange="calc()"><option value="4|12">Économique – 4 €/kg – 12 jours</option><option value="5|8" selected>Standard – 5 €/kg – 8 jours</option><option value="9|4">Express – 9 €/kg – 4 jours</option></select></div>
+<div><label for="eL">Dimensions (cm)</label><input id="eL" type="text" value="30x20x15" oninput="calc()"></div>
+<div><label for="ep">Valeur déclarée (€)</label><input id="ep" type="number" min="0" value="60" oninput="calc()"></div>
+<div class="w"><label><input type="checkbox" id="e1" checked style="width:auto" onchange="calc()"> Première commande (-25 % sur les frais)</label></div></div></div><div class="res" id="er"></div></div>`}
+function calc(){const w=+$('#ew').value||0,[r,d]=$('#el').value.split('|').map(Number),m=+$('#ec').value,dm=($('#eL').value.match(/\d+(\.\d+)?/g)||[]).map(Number),vol=dm.length==3?dm[0]*dm[1]*dm[2]/5000:0,bw=Math.max(w,vol);
+let f=bw*r*m+2,disc=$('#e1').checked?f*.25:0,ins=(+$('#ep').value||0)*.02;
+$('#er').innerHTML=`<p>Poids facturé : ${bw.toFixed(2)} kg ${vol>w?'(volumétrique)':''}</p><p>Frais de livraison estimés</p><big>${eur(f-disc)}</big><p>Livraison estimée : ${d} jours</p><p>Remise bienvenue : -${eur(disc)}</p><p>Assurance optionnelle (2 %) : ${eur(ins)}</p>`}
+const R={
+accueil:()=>`<section class="hero"><div><span class="pill">🚚 Votre partenaire logistique en Chine</span><h1>Commandez en Chine, on s’occupe <em>du reste.</em></h1><p class="lead">GoonGoBuy vous permet d’acheter sur les meilleurs sites chinois et de recevoir vos colis rapidement, en toute sécurité, au meilleur prix.</p>
+<div class="perks"><div class="perk"><b>4/5 € / kg</b>Frais de livraison ultra compétitifs</div><div class="perk"><b>8 jours</b>Délais de livraison rapides</div><div class="perk"><b>Sécurisé</b>Vos colis entre bonnes mains</div><div class="perk"><b>Service client</b>Toujours là pour vous</div></div>
+<a class="btn" href="#compte">Commencer maintenant</a> <a class="btn ghost" href="#services">Voir la vidéo</a></div><div class="blob"><span class="note">Plus proche de vos envies !</span>${hero()}</div></section>
+<div class="stats"><div><b>200+</b><span>Pays livrés</span></div><div><b>+1M</b><span>Colis expédiés</span></div><div><b>98 %</b><span>Clients satisfaits</span></div><div><b>8 jours</b><span>Livraison express</span></div></div>
+<section class="sec"><h2>Comment ça marche ?</h2><div class="steps"><div class="step"><h3>Collez un lien</h3><span class="cat">Taobao, 1688, Weidian, Tmall : ajoutez l’article à votre panier.</span></div><div class="step"><h3>Payez-nous</h3><span class="cat">Nous achetons pour vous et recevons le colis à notre entrepôt.</span></div><div class="step"><h3>Validez les photos</h3><span class="cat">Contrôle qualité avec photos gratuites avant l’envoi.</span></div><div class="step"><h3>Recevez chez vous</h3><span class="cat">Choisissez votre ligne et suivez le colis jusqu’à la porte.</span></div></div></section>
+<section class="sec"><h2>Tendances du moment</h2><div class="grid">${P.slice(0,4).map(pc).join('')}</div><p><a class="btn ghost" href="#boutique">Voir toute la boutique</a></p></section>
+<section class="sec">${estimator()}</section>`,
+boutique:()=>`<section class="sec"><h2>Boutique</h2><p class="lead">Une sélection d’articles populaires, livrés à notre entrepôt puis expédiés chez vous.</p><div class="bar"><input id="q" placeholder="Rechercher un article ou coller un lien Taobao / 1688 / Weidian" oninput="shop()" aria-label="Recherche"></div><div class="bar" id="cats"></div><div class="grid" id="pg"></div></section>`,
+services:()=>`<section class="sec"><h2>Nos services</h2><p class="lead">Tout ce qu’il faut pour acheter en Chine sans stress.</p><div class="grid">${[['🛍️','Achat pour vous','Nous achetons sur Taobao, 1688, Weidian et Tmall à votre place.'],['📸','Photos de contrôle','Photos gratuites de chaque article à réception. Détails sur demande.'],['📦','Regroupement','Réunissez plusieurs commandes dans un seul colis pour payer moins.'],['🏭','Stockage 90 jours','Vos articles patientent gratuitement dans notre entrepôt.'],['✈️','Lignes d’expédition','Économique, Standard ou Express vers plus de 200 pays.'],['🛡️','Assurance colis','Remboursement en cas de perte ou de casse pendant le transport.'],['💬','Service client','Une équipe francophone disponible 7j/7.'],['🎁','Parrainage','Gagnez des coupons à chaque ami qui commande.']].map(s=>`<div class="card"><span class="ico">${s[0]}</span><h3>${s[1]}</h3><span class="cat">${s[2]}</span></div>`).join('')}</div></section>`,
+estimateur:()=>`<section class="sec"><h2>Estimateur de prix</h2><p class="lead">Poids, pays et ligne : le tarif s’affiche tout de suite.</p><br>${estimator()}</section>`,
+suivi:()=>`<section class="sec"><h2>Suivi de colis</h2><p class="lead">Saisissez votre numéro de suivi GoonGoBuy (essayez GGB123456).</p><div class="bar"><input id="tn" placeholder="Numéro de suivi" aria-label="Numéro de suivi" onkeydown="if(event.key=='Enter')track()"><button class="btn" onclick="track()" style="flex:none">Suivre</button></div><div id="tr"></div></section>`,
+apropos:()=>`<section class="sec"><h2>À propos de GoonGoBuy</h2><p class="lead">Nous sommes une équipe basée entre Yiwu et Shenzhen. Notre idée : rendre l’achat en Chine aussi simple que commander en ligne en France.</p><div class="grid"><div class="card"><div class="big">+1M</div>colis expédiés depuis 2019</div><div class="card"><div class="big">200+</div>pays desservis</div><div class="card"><div class="big">98 %</div>de clients satisfaits</div><div class="card"><div class="big">7j/7</div>support en français</div></div></section>`,
+faq:()=>`<section class="sec"><h2>Questions fréquentes</h2>${[['Comment passer commande ?','Collez le lien de l’article ou choisissez-le dans la boutique, ajoutez-le au panier, puis payez. Nous nous occupons de l’achat.'],['Combien coûte la livraison ?','À partir de 4 €/kg selon la ligne choisie. Utilisez l’estimateur pour un tarif précis.'],['Combien de temps dure la livraison ?','Environ 8 jours en ligne Standard, 4 jours en Express.'],['Puis-je regrouper plusieurs articles ?','Oui. Vos articles sont stockés 90 jours gratuitement avant l’envoi groupé.'],['Que faire si mon colis est abîmé ?','Contactez le support avec des photos. Avec l’assurance, vous êtes remboursé.'],['Quels moyens de paiement ?','Carte bancaire, PayPal et portefeuille GoonGoBuy (démo uniquement ici).']].map(f=>`<details><summary>${f[0]}</summary><p>${f[1]}</p></details>`).join('')}</section>`,
+compte:()=>ST.user?`<section class="sec"><h2>Bonjour ${ST.user} 👋</h2><div class="dash"><div class="card"><span class="cat">Portefeuille</span><div class="big">${eur(ST.wallet)}</div><button class="btn sm" onclick="ST.wallet+=50;save();go();toast('+50 € ajoutés (démo)')">Recharger 50 €</button><hr style="border:0;border-top:1px solid var(--line);margin:16px 0"><p class="cat">Adresse de livraison<br>12 rue de la République<br>69002 Lyon, France</p><button class="btn ghost sm" onclick="ST.user=null;save();hdr();go()">Se déconnecter</button></div>
+<div class="card sc"><h3>Mes commandes</h3>${ST.orders.length?`<table><tr><th>N°</th><th>Articles</th><th>Total</th><th>Statut</th></tr>${ST.orders.map(o=>`<tr><td>${o.id}</td><td>${o.n} art.</td><td>${eur(o.t)}</td><td>${o.s}</td></tr>`).join('')}</table>`:'<p class="cat">Aucune commande pour le moment. <a href="#boutique" style="color:var(--o)">Découvrir la boutique</a></p>'}</div></div></section>`
+:`<div class="auth"><div class="tabs"><button class="chip on" id="t1" onclick="tab(1)">Connexion</button><button class="chip" id="t2" onclick="tab(2)">Inscription</button></div><div class="card"><input id="un" placeholder="Prénom" style="display:none" aria-label="Prénom"><input id="em" type="email" placeholder="E-mail" aria-label="E-mail"><input id="pw" type="password" placeholder="Mot de passe" aria-label="Mot de passe"><button class="btn" onclick="login()">Se connecter</button><span class="cat">Démo : n’importe quel e-mail fonctionne. −25 % offerts à l’inscription.</span></div></div>`};
+let cat='Tout';
+function shop(){const q=($('#q')?.value||'').toLowerCase(),cs=['Tout',...new Set(P.map(p=>p.c))];$('#cats').innerHTML=cs.map(c=>`<button class="chip ${c==cat?'on':''}" onclick="cat='${c}';shop()">${c}</button>`).join('');const l=P.filter(p=>(cat=='Tout'||p.c==cat)&&p.n.toLowerCase().includes(q));$('#pg').innerHTML=l.length?l.map(pc).join(''):'<p class="cat">Aucun article trouvé. Essayez un autre mot-clé.</p>'}
+function tab(n){$('#t1').className='chip'+(n==1?' on':'');$('#t2').className='chip'+(n==2?' on':'');$('#un').style.display=n==2?'':'none';$('#app .btn').textContent=n==1?'Se connecter':'Créer mon compte'}
+function login(){const e=$('#em').value.trim();if(!e)return toast('Saisissez un e-mail');ST.user=$('#un').value.trim()||e.split('@')[0];save();hdr();toast('Connecté');go()}
+function track(){const n=$('#tn').value.trim();if(!n)return toast('Saisissez un numéro');let h=0;for(const c of n)h+=c.charCodeAt(0);const d=h%5+1,S=[['Commande passée','Paiement confirmé'],['Reçu à l’entrepôt','Yiwu, Chine'],['Contrôle qualité','Photos disponibles'],['Expédié','Départ de Shanghai'],['En livraison','Prise en charge en France'],['Livré','Remis en main propre']];
+$('#tr').innerHTML=`<p><b>${n}</b></p><ul class="tl">${S.map((s,i)=>`<li class="${i<d?'d':''}"><b>${s[0]}</b><small>${i<d?s[1]:'En attente'}</small></li>`).join('')}</ul>`}
+function cart(o){const d=$('#dr');d.classList.toggle('o',o);if(!o)return;const L=ST.cart.map(c=>({...P.find(p=>p.id==c.id),q:c.q})),sub=L.reduce((s,p)=>s+p.p*p.q,0),kg=L.reduce((s,p)=>s+p.w*p.q,0),sh=kg*5;
+d.innerHTML=`<div style="display:flex;justify-content:space-between"><h2>Mon panier</h2><button class="ic" onclick="cart(0)" aria-label="Fermer">✕</button></div><div style="flex:1;overflow:auto">${L.length?L.map(p=>`<div class="ci">${art(p.t,p.k)}<div><b>${p.n}</b><br><span class="cat">${eur(p.p)} · ${p.w} kg</span></div><span class="q"><button onclick="qty(${p.id},-1)" aria-label="Moins">−</button> ${p.q} <button onclick="qty(${p.id},1)" aria-label="Plus">+</button></span></div>`).join(''):'<p class="cat">Votre panier est vide. Ajoutez des articles depuis la boutique.</p>'}</div>
+<div><p>Sous-total : <b>${eur(sub)}</b><br>Livraison estimée (${kg.toFixed(1)} kg · 5 €/kg) : <b>${eur(sh)}</b><br>Total : <b class="price">${eur(sub+sh)}</b></p><button class="btn" style="width:100%" onclick="pay()">Passer la commande</button></div>`}
+function add(id){const c=ST.cart.find(x=>x.id==id);c?c.q++:ST.cart.push({id,q:1});save();hdr();toast('Ajouté au panier');if($('#dr').classList.contains('o'))cart(1)}
+function qty(id,d){const c=ST.cart.find(x=>x.id==id);c.q+=d;if(c.q<1)ST.cart=ST.cart.filter(x=>x.id!=id);save();hdr();cart(1)}
+function pay(){if(!ST.cart.length)return toast('Panier vide');if(!ST.user){cart(0);location.hash='compte';return toast('Connectez-vous pour commander')}const t=ST.cart.reduce((s,c)=>{const p=P.find(x=>x.id==c.id);return s+(p.p+p.w*5)*c.q},0);ST.orders.unshift({id:'GGB'+(100000+Math.floor(Math.random()*899999)),n:ST.cart.reduce((s,c)=>s+c.q,0),t,s:'En préparation'});ST.cart=[];save();hdr();cart(0);toast('Commande confirmée (démo)');location.hash='compte';go()}
+function hdr(){$('#cnt').textContent=ST.cart.reduce((s,c)=>s+c.q,0);$('#acc').textContent=ST.user?'👤 '+ST.user:'👤 Se connecter';$('#reg').style.display=ST.user?'none':''}
+function go(){const h=location.hash.slice(1)||'accueil',k=R[h]?h:'accueil';$('#app').innerHTML=R[k]();$('#nav').innerHTML=NAV.map(n=>`<a href="#${n[0]}" class="${n[0]==k?'on':''}">${n[1]}</a>`).join('');if(k=='boutique')shop();if($('#er'))calc();hdr();scrollTo(0,0)}
+addEventListener('hashchange',go);go();
+</script></body></html>
